@@ -1,0 +1,301 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1em;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(135deg, white, #fff5f5);
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "logo logo img img" "logo logo img img" "logo logo img img" "logo logo img img" "main main img img" "main main img img" "main main img img" "main main img img";
+  padding-left: 11rem;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+  }
+}
+
+.container::before {
+  content: '';
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 60vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.container #logo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: logo;
+  position: relative;
+}
+
+.container #logo img {
+  position: absolute;
+  top: 30%;
+}
+
+@media screen and (max-width: 420px) {
+  .container #logo {
+    position: unset;
+  }
+  .container #logo img {
+    position: unset;
+    top: unset;
+    width: 45%;
+    padding: 1.5rem;
+  }
+}
+
+.container #bgRight {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 8;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: img;
+}
+
+.container #bgRight .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 420px) {
+  .container #bgRight .desktop {
+    display: none;
+  }
+  .container #bgRight .mobile {
+    display: unset;
+    width: 100%;
+  }
+}
+
+.container #content {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  padding-right: 16rem;
+}
+
+.container #content .text1 {
+  color: #ce9797;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.container #content .text2 {
+  color: #413a3a;
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.container #content .text3 {
+  color: #ce9797;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding-right: 2rem;
+  margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 420px) {
+  .container #content {
+    padding-right: unset;
+    padding: 2rem;
+  }
+  .container #content .text1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .container #content .text2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .container #content .text3 {
+    font-size: 0.9rem;
+    padding-right: unset;
+    text-align: center;
+  }
+}
+
+.form {
+  padding-top: 1rem;
+}
+
+.form .inputContainer {
+  position: relative;
+}
+
+.form .inputContainer input {
+  font-size: 0.8rem;
+  font-weight: 300;
+  opacity: 0.9;
+  color: black;
+  outline: none;
+  background: transparent;
+  padding: 1rem 1.5rem;
+  border: 2px solid lightgrey;
+  border-radius: 25rem;
+  letter-spacing: 0.05rem;
+  width: 97%;
+}
+
+.form .inputContainer input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+.form .inputContainer input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.form .inputContainer input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.form .inputContainer input::placeholder {
+  color: #ce9797;
+}
+
+.form .inputContainer .errorIcon {
+  display: none;
+}
+
+.form .inputContainer .submitBtn {
+  position: absolute;
+  bottom: 0;
+  right: 3%;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  -webkit-box-shadow: 2px 5px 10px #f8bfbf;
+          box-shadow: 2px 5px 10px #f8bfbf;
+  border: none;
+  outline: none;
+  padding: 0.875rem 2.5rem;
+  border-radius: 25rem;
+}
+
+.form .inputContainer .submitBtn:hover {
+  background: #f8bfbf;
+}
+
+@media screen and (max-width: 420px) {
+  .form .inputContainer input {
+    font-size: 0.7rem;
+    padding: 0.8rem 1.3rem;
+  }
+  .form .inputContainer .submitBtn {
+    padding: 0.62rem 1.5rem;
+  }
+}
+
+.form .errorText {
+  display: none;
+}
+
+.error {
+  position: relative;
+}
+
+.error .inputContainer {
+  position: relative;
+}
+
+.error .inputContainer input {
+  border: 2px solid #f96262;
+}
+
+.error .inputContainer .errorIcon {
+  display: initial;
+  position: absolute;
+  bottom: 26%;
+  right: 29%;
+}
+
+@media screen and (max-width: 420px) {
+  .error .inputContainer .errorIcon {
+    bottom: 20%;
+    right: 25%;
+  }
+}
+
+.error .inputContainer .submitBtn {
+  position: absolute;
+  background: #f8bfbf;
+  -webkit-box-shadow: 2px 5px 10px #ee8c8c;
+          box-shadow: 2px 5px 10px #ee8c8c;
+}
+
+.error .inputContainer .submitBtn:hover {
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+}
+
+.error .errorText {
+  display: initial;
+  position: absolute;
+  top: 115%;
+  left: 5%;
+  font-size: 0.8rem;
+  color: #ee8c8c;
+}
+/*# sourceMappingURL=style.css.map */
