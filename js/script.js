@@ -9,11 +9,11 @@ function validation(){
     if (regEx.test(emailValue)){
         form.classList.remove("error");
         return true;
-        console.log(Valid Address);
+        console.log("Valid Address");
     }
     else{
         form.classList.add("error");
         return false;
-        console.log(Invalid Address);
+        console.log("Invalid Address");
     }
 }
