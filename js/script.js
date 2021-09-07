@@ -8,12 +8,12 @@ function validation(){
 
     if (regEx.test(emailValue)){
         form.classList.remove("error");
-        return true;
         console.log("Valid Address");
+        return true;
     }
     else{
         form.classList.add("error");
-        return false;
         console.log("Invalid Address");
+        return false;
     }
 }
