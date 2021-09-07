@@ -7,13 +7,13 @@ function validation(){
 
 
     if (regEx.test(emailValue)){
-        // alert("Valid Address");
         form.classList.remove("error");
         return true;
+        console.log(Valid Address);
     }
     else{
-        // alert("InValid Address");
         form.classList.add("error");
         return false;
+        console.log(Invalid Address);
     }
 }
