@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor.io/solutions](https://frontendmentor.io/solutions/base-apparel-site-using-scss-qyZXiSBD2)
+- Live Site URL: [flash54.github.io/BaseApparel](https://flash54.github.io/BaseApparel/)
 
 ## My process
 
@@ -46,5 +46,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Flash](https://flash54.github.io)
+- Frontend Mentor - [@flash54](https://www.frontendmentor.io/profile/flash54)
